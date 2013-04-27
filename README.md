@@ -1,2 +1,3 @@
 horse-protect
 =============
+A simple plugin to make sure other people don't kill your horses...

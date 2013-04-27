@@ -7,7 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
-public class EntityListener implements Listener
+public class EntityEventListener implements Listener
 {
 	// TODO: SEARCH AND REPLACE WOLF -> HORSE; Wolf -> Horse
 

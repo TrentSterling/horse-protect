@@ -1,5 +1,6 @@
 package net.chiisana.horseprotect;
 
+import net.chiisana.horseprotect.listener.EntityEventListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class HorseProtect extends JavaPlugin {
@@ -13,6 +14,6 @@ public class HorseProtect extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 
-
+		this.getServer().getPluginManager().registerEvents(new EntityEventListener(), this);
 	}
 }
