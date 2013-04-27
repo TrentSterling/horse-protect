@@ -83,6 +83,15 @@ public class EntityEventListener implements Listener
 
 	private void _helperCheckPermission(EntityDamageByEntityEvent event, Player owner, Wolf horse, Player attacker)
 	{
+		if (attacker == null)
+		{
+			if (owner.hasPermission("horseprotect.protecthorses"))
+			{
+				event.setCancelled(true);
+			}
+			return;
+		}
+
 		if (attacker.getName().equals(owner.getName()))
 		{
 			// Owner killing own horse, allow it
@@ -94,7 +103,7 @@ public class EntityEventListener implements Listener
 				event.setCancelled(true);
 			}
 
-			if (owner.hasPermission("horseprotect.reflectdamages") && (attacker != null))
+			if (owner.hasPermission("horseprotect.reflectdamages"))
 			{
 				// Reflect the damage
 				int damage = event.getDamage();
